@@ -27,4 +27,6 @@ class Servo:
 	def DecreaseAngle(self, angle):
 		self.current_angle -= angle
 		self.SetAngle(self.current_angle)
-	
+
+	def StopServo(self):
+		PWM.stop(self.servo_pin)
