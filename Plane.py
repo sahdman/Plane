@@ -6,10 +6,15 @@ class Plane:
 		# Edit this according to the plane connections.
 		# Maximum number of servos allowed = 4
 		self.Ailerons_Right = Servo("P8_13")
-		self.Ailerons_Left  = Servo("P8_13")
-		self.Flaps          = Servo("P9_14")
-		self.Elevators      = Servo("P9_16")
+		self.Ailerons_Left  = Servo("P9_14")
+		self.Flaps          = Servo("P9_21")
+		self.Elevators      = Servo("P9_42")
 		#self.Radar          = Servo("")
+		
+		self.Ailerons_Right.StartServo()
+		self.Ailerons_Left.StartServo()
+		self.Flaps.StartServo()
+		self.Elevators.StartServo()
 		
 		# Set makimum titl angles of all servos.
 		# Edit this portion according to the plane being used
